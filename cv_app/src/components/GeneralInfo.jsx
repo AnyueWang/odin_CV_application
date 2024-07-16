@@ -4,6 +4,9 @@ const GeneralInfo = ({ info, setInfo }) => {
       <form>
         <label htmlFor="first-name">First name:</label>
         <input type="text" id="first-name" value={info.firstName} onChange={(e) => setInfo({ ...info, firstName: e.target.value })} />
+
+        <label htmlFor="last-name">Last name:</label>
+        <input type="text" id="last-name" value={info.lastName} onChange={(e) => setInfo({ ...info, lastName: e.target.value })} />
       </form>
     </div>
   )
