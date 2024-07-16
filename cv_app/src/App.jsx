@@ -7,6 +7,7 @@ function App() {
   const initialGeneralInfo = {
     firstName: '',
     lastName: '',
+    title: '',
   }
 
   const [generalInfo, setGeneralInfo] = useState(initialGeneralInfo)
