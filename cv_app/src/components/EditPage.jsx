@@ -2,11 +2,13 @@ import { useState } from 'react'
 import GeneralInfo from './GeneralInfo'
 import WorkInfo from './WorkInfo'
 import ExpandBtn from './ExpandBtn'
+import EducationInfo from './EducationInfo'
 
-const EditPage = ({ generalInfo, setGeneralInfo, workInfo, setWorkInfo }) => {
+const EditPage = ({ generalInfo, setGeneralInfo, workInfo, setWorkInfo, educationInfo, setEducationInfo }) => {
   const infos = [
     'General Information',
     'Work Experience',
+    'Education Experience',
   ]
   const [expandInfo, setExpandInfo] = useState(null)
   const toggleExpand = (infoIdx) => {
@@ -21,6 +23,9 @@ const EditPage = ({ generalInfo, setGeneralInfo, workInfo, setWorkInfo }) => {
       </ExpandBtn>
       <ExpandBtn isExpand={expandInfo===1} handleClick={()=>toggleExpand(1)} btnTag={infos[1]}>
         <WorkInfo info={workInfo} setInfo={setWorkInfo} />
+      </ExpandBtn>
+      <ExpandBtn isExpand={expandInfo===2} handleClick={()=>toggleExpand(2)} btnTag={infos[2]}>
+        <EducationInfo info={educationInfo} setInfo={setEducationInfo} />
       </ExpandBtn>
     </div>
   )

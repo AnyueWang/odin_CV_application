@@ -14,9 +14,14 @@ function App() {
     id: uuidv4(),
     jobTitle: '',
   }]
+  const initialEducationInfo = [{
+    id: uuidv4(),
+    degree: '',
+  }]
 
   const [generalInfo, setGeneralInfo] = useState(initialGeneralInfo)
   const [workInfo, setWorkInfo] = useState(initialWorkInfo)
+  const [educationInfo, setEducationInfo] = useState(initialEducationInfo)
 
   return (
     <>
@@ -25,8 +30,9 @@ function App() {
         <EditPage
           generalInfo={generalInfo} setGeneralInfo={setGeneralInfo}
           workInfo={workInfo} setWorkInfo={setWorkInfo}
+          educationInfo={educationInfo} setEducationInfo={setEducationInfo}
         />
-        <DisplayPage generalInfo={generalInfo} workInfo={workInfo} />
+        <DisplayPage generalInfo={generalInfo} workInfo={workInfo} educationInfo={educationInfo} />
       </div>
     </>
   )
