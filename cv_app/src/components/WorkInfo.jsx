@@ -1,10 +1,17 @@
+import addIcon from '../assets/add.svg'
+
 const WorkInfo = ({ info, setInfo }) => {
   return (
     <form className="info-form">
-      {
-        info.map(eachExp => {
+      { <>
+      <div>
+        <p>Add experience</p>
+        <img src={addIcon} alt="add new work experience" className='add-icon' />
+      </div>
+        {info.map((eachExp, idx) => {
           return (
             <div key={eachExp.id}>
+              <p>Experience #{idx+1}</p>
               <label htmlFor={'job-title-' + eachExp.id}>Job title:</label>
               <input
                 type="text"
@@ -18,7 +25,8 @@ const WorkInfo = ({ info, setInfo }) => {
               />
             </div>
           )
-        })
+        })}
+        </>
       }
 
     </form>
