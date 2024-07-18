@@ -1,4 +1,4 @@
-const DisplayPage = ({ generalInfo, workInfo, educationInfo }) => {
+const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
   return (
     <div className="display-page">
       <p>{generalInfo.firstName + ' ' + generalInfo.lastName}</p>
@@ -8,7 +8,7 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo }) => {
           workInfo.map(each => {
             return (
               <div key={each.id}>
-                <p>{each.jobTitle}</p>
+                <p>{each.title}</p>
               </div>
             )
           })
@@ -20,6 +20,17 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo }) => {
             return (
               <div key={each.id}>
                 <p>{each.degree}</p>
+              </div>
+            )
+          })
+        }
+      </div>
+      <div>
+        {
+          projectInfo.map(each => {
+            return (
+              <div key={each.id}>
+                <p>{each.name}</p>
               </div>
             )
           })
