@@ -17,7 +17,7 @@ const EditPage = ({ generalInfo, setGeneralInfo, workInfo, setWorkInfo, educatio
     setExpandInfo(expandInfo === infoIdx ? null : infoIdx)
   }
   return (
-    <div>
+    <div className='edit-container'>
       <ExpandBtn isExpand={expandInfo === 0} handleClick={() => toggleExpand(0)} btnTag={infos[0]}>
         <GeneralInfo info={generalInfo} setInfo={setGeneralInfo} />
       </ExpandBtn>

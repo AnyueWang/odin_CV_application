@@ -1,3 +1,17 @@
+:root {
+  --theme-color-1: #7469b6;
+  --theme-color-2: #ad88c6;
+  --theme-color-3: #e1afd1;
+  --theme-color-4: #ffe6e6;
+  --theme-color-1-filter: invert(45%) sepia(55%) saturate(442%) hue-rotate(208deg) brightness(87%) contrast(91%);
+  --theme-color-2-filter: invert(70%) sepia(80%) saturate(952%) hue-rotate(205deg) brightness(84%) contrast(82%);
+  --theme-color-3-filter: invert(79%) sepia(59%) saturate(282%) hue-rotate(282deg) brightness(95%) contrast(85%);
+  --theme-color-4-filter: invert(85%) sepia(2%) saturate(2083%) hue-rotate(314deg) brightness(105%) contrast(109%);
+  --font-color-light-background: black;
+  --font-color-dark-background: white;
+  --font-color-dark-background-filter: invert(95%) sepia(0%) saturate(7468%) hue-rotate(123deg) brightness(106%) contrast(100%);
+}
+
 body {
   justify-content: center;
 }
@@ -16,6 +30,7 @@ body {
 .info-form {
   display: flex;
   flex-direction: column;
+  padding: 10px 20px;
 }
 
 .info-form>div {
@@ -23,21 +38,85 @@ body {
   flex-direction: column;
 }
 
+.info-form {
+  color: var(--font-color-dark-background);
+}
+
 .expand-container {
   display: flex;
   flex-direction: column;
 }
 
+.expand-block {
+  background-color: var(--theme-color-3);
+  border-radius: 5px;
+  transition: max-height 0.4s ease-in, opacity 0.5s ease-in, visibility 0.5s ease-in allow-discrete;
+}
+
+.expand-block-hidden {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  transition: visibility 0s, opacity 0s, max-height 0s allow-discrete;
+}
+
+.icon {
+  filter: var(--font-color-dark-background-filter);
+  width: 25px;
+}
+
 .operation-icon {
-  width: 20px;
+  transition: all 0.5s ease-in;
+}
+
+.operation-icon:hover {
+  filter: var(--theme-color-1-filter);
+}
+
+.signing-icon {
+  transition: all 0.5s;
+}
+
+.flip-signing-icon {
+  rotate: 180deg;
 }
 
 .add-experience-container {
-  flex-direction: row!important;
+  flex-direction: row !important;
   justify-content: space-between;
 }
 
 .delete-experience-container {
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+}
+
+label {
+  font-size: 12px;
+}
+
+.add-experience-container>p,
+.delete-experience-container>p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 18px 0;
+}
+
+.expand-btn {
+  background-color: var(--theme-color-1);
+  color: var(--font-color-dark-background);
+  transition: background-color 0.5s ease-in;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expand-btn:hover,
+.expand-btn-focus {
+  background-color: var(--theme-color-2);
+}
+
+.edit-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }

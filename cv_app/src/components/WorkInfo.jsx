@@ -7,16 +7,15 @@ const WorkInfo = ({ info, setInfo }) => {
     setInfo(info.concat(helpers.newWorkInfo()))
   }
   const deleteExperience = (id) => {
-    setInfo(info.filter(each=>each.id!==id))
+    setInfo(info.filter(each => each.id !== id))
   }
   return (
     <form className="info-form">
       {<>
-        <AddExperience handleClick={addNewExperience} />
         {info.map((eachExp, idx) => {
           return (
             <div key={eachExp.id}>
-              <DeleteExperience handleClick={()=>deleteExperience(eachExp.id)} idx={idx} />
+              <DeleteExperience handleClick={() => deleteExperience(eachExp.id)} idx={idx} />
               <label htmlFor={'job-title-' + eachExp.id}>Job title:</label>
               <input
                 type="text"
@@ -30,6 +29,8 @@ const WorkInfo = ({ info, setInfo }) => {
             </div>
           )
         })}
+        <AddExperience handleClick={addNewExperience} />
+
       </>
       }
 

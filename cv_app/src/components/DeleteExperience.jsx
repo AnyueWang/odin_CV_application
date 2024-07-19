@@ -4,7 +4,7 @@ const DeleteExperience = ({idx, handleClick}) => {
   return (
     <div className='delete-experience-container'>
       <p>Experience #{idx + 1}</p>
-      <img src={deleteIcon} alt="delete experience" className="operation-icon" onClick={handleClick} hidden={idx===0}/>
+      <img src={deleteIcon} alt="delete experience" className="operation-icon icon" onClick={handleClick} hidden={idx===0}/>
     </div>
   )
 }
