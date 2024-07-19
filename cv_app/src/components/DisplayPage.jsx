@@ -3,6 +3,7 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
     <div className="display-page">
       <p>{generalInfo.firstName + ' ' + generalInfo.lastName}</p>
       <p>{generalInfo.title}</p>
+      <p>{generalInfo.email}</p>
       <div>
         {
           workInfo.map(each => {

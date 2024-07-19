@@ -15,6 +15,11 @@ const GeneralInfo = ({ info, setInfo }) => {
         <label htmlFor="title">Title:</label>
         <input type="text" id="title" value={info.title} onChange={(e) => setInfo({ ...info, title: e.target.value })} />
       </div>
+
+      <div>
+        <label htmlFor="email">E-mail:</label>
+        <input type="email" id="email" value={info.email} onChange={(e) => setInfo({ ...info, email: e.target.value })} />
+      </div>
     </form>
   )
 }
