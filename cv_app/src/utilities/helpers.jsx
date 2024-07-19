@@ -8,6 +8,7 @@ const newGeneralInfo = () => ({
   telephone: '',
   address: '',
   website: '',
+  linkedin: '',
 })
 const newWorkInfo = () => [{
   id: uuidv4(),

@@ -35,6 +35,11 @@ const GeneralInfo = ({ info, setInfo }) => {
         <label htmlFor="website">Website:</label>
         <input type="url" id="website" value={info.website} onChange={(e) => setInfo({ ...info, website: e.target.value })} />
       </div>
+
+      <div>
+        <label htmlFor="linkedin">LinkedIn:</label>
+        <input type="url" id="linkedin" value={info.linkedin} onChange={(e) => setInfo({ ...info, linkedin: e.target.value })} />
+      </div>
     </form>
   )
 }

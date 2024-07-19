@@ -2,6 +2,7 @@ import phoneIcon from '../assets/phone.svg'
 import emailIcon from '../assets/email.svg'
 import addressIcon from '../assets/address.svg'
 import websiteIcon from '../assets/website.svg'
+import linkedinIcon from '../assets/linkedin.svg'
 
 const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
   return (
@@ -12,6 +13,7 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
       <p><img src={phoneIcon} className='icon-display' />: {generalInfo.telephone}</p>
       <p><img src={addressIcon} className='icon-display' />: {generalInfo.address}</p>
       <p><img src={websiteIcon} className='icon-display' />: {generalInfo.website}</p>
+      <p><img src={linkedinIcon} className='icon-display' />: {generalInfo.linkedin}</p>
       <div>
         {
           workInfo.map(each => {
