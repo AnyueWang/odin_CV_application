@@ -12,6 +12,7 @@ const newGeneralInfo = () => ({
   github: '',
   summary: '',
   skills: '',
+  languages: '',
 })
 const newWorkInfo = () => [{
   id: uuidv4(),

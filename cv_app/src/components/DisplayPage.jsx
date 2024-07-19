@@ -18,6 +18,7 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
       <p><img src={githubIcon} className='icon-display' />: {generalInfo.github}</p>
       <p>Summary: {generalInfo.summary}</p>
       <p>Skills: {generalInfo.skills}</p>
+      <p>Languages: {generalInfo.languages}</p>
       <div>
         {
           workInfo.map(each => {
