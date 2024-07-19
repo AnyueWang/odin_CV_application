@@ -1,9 +1,13 @@
 import AddExperience from "./AddExperience"
+import DeleteExperience from "./DeleteExperience"
 import helpers from '../utilities/helpers'
 
 const WorkInfo = ({ info, setInfo }) => {
   const addNewExperience = () => {
     setInfo(info.concat(helpers.newWorkInfo()))
+  }
+  const deleteExperience = (id) => {
+    setInfo(info.filter(each=>each.id!==id))
   }
   return (
     <form className="info-form">
@@ -12,7 +16,7 @@ const WorkInfo = ({ info, setInfo }) => {
         {info.map((eachExp, idx) => {
           return (
             <div key={eachExp.id}>
-              <p>Experience #{idx + 1}</p>
+              <DeleteExperience handleClick={()=>deleteExperience(eachExp.id)} idx={idx} />
               <label htmlFor={'job-title-' + eachExp.id}>Job title:</label>
               <input
                 type="text"

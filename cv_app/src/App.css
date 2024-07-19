@@ -28,11 +28,16 @@ body {
   flex-direction: column;
 }
 
-.add-icon {
+.operation-icon {
   width: 20px;
 }
 
 .add-experience-container {
   flex-direction: row!important;
   justify-content: space-between;
+}
+
+.delete-experience-container {
+  display: flex;
+  gap: 10px;
 }
