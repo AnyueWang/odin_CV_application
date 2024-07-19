@@ -23,9 +23,8 @@ const WorkInfo = ({ info, setInfo }) => {
                 id={'job-title-' + eachExp.id}
                 value={eachExp.title}
                 onChange={(e) => {
-                  const otherExps = info.filter(each => each.id !== eachExp.id)
                   eachExp.title = e.target.value
-                  setInfo([...otherExps, eachExp])
+                  setInfo([...info])
                 }}
               />
             </div>
