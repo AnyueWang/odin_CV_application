@@ -45,6 +45,11 @@ const GeneralInfo = ({ info, setInfo }) => {
         <label htmlFor="github">GitHub:</label>
         <input type="url" id="github" value={info.github} onChange={(e) => setInfo({ ...info, github: e.target.value })} />
       </div>
+
+      <div>
+        <label htmlFor="summary">Summary:</label>
+        <textarea type="url" id="summary" value={info.summary} rows={5} onChange={(e) => setInfo({ ...info, summary: e.target.value })} />
+      </div>
     </form>
   )
 }

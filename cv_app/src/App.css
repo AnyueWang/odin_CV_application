@@ -10,12 +10,18 @@
   --font-color-light-background: black;
   --font-color-dark-background: white;
   --font-color-dark-background-filter: invert(95%) sepia(0%) saturate(7468%) hue-rotate(123deg) brightness(106%) contrast(100%);
+  --font-family: 'Times New Roman', Times, serif;
 }
 
 body {
   justify-content: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: var(--font-family);
   min-width: 1200px!important;
+}
+
+textarea,
+input {
+  font-family: var(--font-family);
 }
 
 .container {
