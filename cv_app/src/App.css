@@ -14,6 +14,8 @@
 
 body {
   justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  min-width: 1200px!important;
 }
 
 .container {
@@ -22,9 +24,13 @@ body {
   gap: 20px;
 }
 
+.edit-container {
+  width: 300px;
+}
+
 .display-page {
   background-color: azure;
-  width: 600px;
+  width: 800px;
   padding: 0 20px;
 }
 
@@ -92,6 +98,11 @@ body {
   justify-content: space-between;
 }
 
+.one-experience {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--font-color-dark-background);
+}
+
 label {
   font-size: 12px;
 }
@@ -100,7 +111,7 @@ label {
 .delete-experience-container>p {
   font-size: 16px;
   font-weight: 600;
-  margin: 18px 0;
+  margin: 8px 0;
 }
 
 .expand-btn {

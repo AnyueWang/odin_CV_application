@@ -14,7 +14,7 @@ const WorkInfo = ({ info, setInfo }) => {
       {<>
         {info.map((eachExp, idx) => {
           return (
-            <div key={eachExp.id}>
+            <div key={eachExp.id} className="one-experience">
               <DeleteExperience handleClick={() => deleteExperience(eachExp.id)} idx={idx} />
               <label htmlFor={'job-title-' + eachExp.id}>Job title:</label>
               <input
