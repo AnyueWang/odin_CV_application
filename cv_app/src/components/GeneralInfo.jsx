@@ -50,6 +50,11 @@ const GeneralInfo = ({ info, setInfo }) => {
         <label htmlFor="summary">Summary:</label>
         <textarea type="url" id="summary" value={info.summary} rows={5} onChange={(e) => setInfo({ ...info, summary: e.target.value })} />
       </div>
+
+      <div>
+        <label htmlFor="skills">Skills:</label>
+        <textarea type="url" id="skills" value={info.skills} rows={3} onChange={(e) => setInfo({ ...info, skills: e.target.value })} />
+      </div>
     </form>
   )
 }
