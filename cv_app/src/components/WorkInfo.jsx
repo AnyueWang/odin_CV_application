@@ -1,17 +1,18 @@
-import addIcon from '../assets/add.svg'
+import AddExperience from "./AddExperience"
+import helpers from '../utilities/helpers'
 
 const WorkInfo = ({ info, setInfo }) => {
+  const addNewExperience = () => {
+    setInfo(info.concat(helpers.newWorkInfo()))
+  }
   return (
     <form className="info-form">
-      { <>
-      <div>
-        <p>Add experience</p>
-        <img src={addIcon} alt="add new work experience" className='add-icon' />
-      </div>
+      {<>
+        <AddExperience handleClick={addNewExperience} />
         {info.map((eachExp, idx) => {
           return (
             <div key={eachExp.id}>
-              <p>Experience #{idx+1}</p>
+              <p>Experience #{idx + 1}</p>
               <label htmlFor={'job-title-' + eachExp.id}>Job title:</label>
               <input
                 type="text"
@@ -26,7 +27,7 @@ const WorkInfo = ({ info, setInfo }) => {
             </div>
           )
         })}
-        </>
+      </>
       }
 
     </form>

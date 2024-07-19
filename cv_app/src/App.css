@@ -31,3 +31,8 @@ body {
 .add-icon {
   width: 20px;
 }
+
+.add-experience-container {
+  flex-direction: row!important;
+  justify-content: space-between;
+}
