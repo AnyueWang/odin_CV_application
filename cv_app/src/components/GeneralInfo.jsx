@@ -40,6 +40,11 @@ const GeneralInfo = ({ info, setInfo }) => {
         <label htmlFor="linkedin">LinkedIn:</label>
         <input type="url" id="linkedin" value={info.linkedin} onChange={(e) => setInfo({ ...info, linkedin: e.target.value })} />
       </div>
+
+      <div>
+        <label htmlFor="github">GitHub:</label>
+        <input type="url" id="github" value={info.github} onChange={(e) => setInfo({ ...info, github: e.target.value })} />
+      </div>
     </form>
   )
 }
