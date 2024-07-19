@@ -20,6 +20,11 @@ const GeneralInfo = ({ info, setInfo }) => {
         <label htmlFor="email">E-mail:</label>
         <input type="email" id="email" value={info.email} onChange={(e) => setInfo({ ...info, email: e.target.value })} />
       </div>
+
+      <div>
+        <label htmlFor="telephone">Telephone:</label>
+        <input type="tel" id="telephone" value={info.telephone} onChange={(e) => setInfo({ ...info, telephone: e.target.value })} />
+      </div>
     </form>
   )
 }

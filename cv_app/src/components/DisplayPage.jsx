@@ -1,9 +1,13 @@
+import phoneIcon from '../assets/phone.svg'
+import emailIcon from '../assets/email.svg'
+
 const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
   return (
     <div className="display-page">
       <p>{generalInfo.firstName + ' ' + generalInfo.lastName}</p>
       <p>{generalInfo.title}</p>
-      <p>{generalInfo.email}</p>
+      <p><img src={emailIcon} className='icon-display' />: {generalInfo.email}</p>
+      <p><img src={phoneIcon} className='icon-display' />: {generalInfo.telephone}</p>
       <div>
         {
           workInfo.map(each => {
