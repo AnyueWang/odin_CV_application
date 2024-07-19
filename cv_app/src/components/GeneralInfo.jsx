@@ -28,7 +28,7 @@ const GeneralInfo = ({ info, setInfo }) => {
 
       <div>
         <label htmlFor="address">Address:</label>
-        <input type="tel" id="address" value={info.address} onChange={(e) => setInfo({ ...info, address: e.target.value })} />
+        <input type="text" id="address" value={info.address} onChange={(e) => setInfo({ ...info, address: e.target.value })} />
       </div>
     </form>
   )
