@@ -17,6 +17,7 @@ body {
   justify-content: center;
   font-family: var(--font-family);
   min-width: 1200px!important;
+  background-color: var(--theme-color-4);
 }
 
 textarea,
@@ -37,6 +38,7 @@ input {
 .display-page {
   background-color: azure;
   width: 800px;
+  height: 1200px;
   padding: 0 20px;
 }
 
@@ -141,4 +143,28 @@ label {
 
 .icon-display {
   width: 20px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 30px 0;
+  background-color: var(--theme-color-4);
+  margin-bottom: 50px;
+  opacity: 30;
+  z-index: 1;
+}
+
+h1 {
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  background-color: var(--theme-color-4);
+  margin-bottom: 0;
+  margin-top: 50px;
+  padding: 10px 0;
 }

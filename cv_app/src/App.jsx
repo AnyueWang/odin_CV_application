@@ -12,7 +12,9 @@ function App() {
 
   return (
     <>
-      <h1>CV Application</h1>
+      <div className='header'>
+        <h1>CV Application</h1>
+      </div>
       <div className='container'>
         <EditPage
           generalInfo={generalInfo} setGeneralInfo={setGeneralInfo}
@@ -21,6 +23,9 @@ function App() {
           projectInfo={projectInfo} setProjectInfo={setProjectInfo}
         />
         <DisplayPage generalInfo={generalInfo} workInfo={workInfo} educationInfo={educationInfo} projectInfo={projectInfo} />
+      </div>
+      <div className='footer'>
+      <p>© 2024 CV Application. Created By Anyue Wang. All Rights Reserved.</p>
       </div>
     </>
   )
