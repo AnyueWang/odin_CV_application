@@ -1,10 +1,23 @@
+import helpers from "../utilities/helpers"
+import DeleteExperience from "./DeleteExperience"
+import AddExperience from "./AddExperience"
+
 const ProjectInfo = ({ info, setInfo }) => {
+  const addNewExperience = () => {
+    setInfo(info.concat(helpers.newEducationInfo()))
+  }
+  const deleteExperience = (id) => {
+    setInfo(info.filter(each => each.id !== id))
+  }
+
   return (
     <form className="info-form">
       {
-        info.map(eachExp => {
+        info.map((eachExp, idx) => {
           return (
-            <div key={eachExp.id}>
+            <div key={eachExp.id} className="one-experience">
+              <DeleteExperience handleClick={() => deleteExperience(eachExp.id)} idx={idx} />
+
               <label htmlFor={'pro-name-' + eachExp.id}>Project name:</label>
               <input
                 type="text"
@@ -20,7 +33,7 @@ const ProjectInfo = ({ info, setInfo }) => {
           )
         })
       }
-
+      <AddExperience handleClick={addNewExperience} />
     </form>
   )
 }
