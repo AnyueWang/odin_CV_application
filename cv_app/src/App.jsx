@@ -25,7 +25,7 @@ function App() {
         <DisplayPage generalInfo={generalInfo} workInfo={workInfo} educationInfo={educationInfo} projectInfo={projectInfo} />
       </div>
       <div className='footer'>
-      <p>© 2024 CV Application. Created By Anyue Wang. All Rights Reserved.</p>
+        <p>© 2024 CV Application. Created By Anyue Wang. All Rights Reserved.</p>
       </div>
     </>
   )
