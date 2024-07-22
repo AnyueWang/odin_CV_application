@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import EditPage from './components/EditPage'
 import DisplayPage from './components/DisplayPage'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import helpers from './utilities/helpers'
 
 function App() {
@@ -12,9 +14,7 @@ function App() {
 
   return (
     <>
-      <div className='header'>
-        <h1>CV Application</h1>
-      </div>
+      <Header />
       <div className='container'>
         <EditPage
           generalInfo={generalInfo} setGeneralInfo={setGeneralInfo}
@@ -24,9 +24,7 @@ function App() {
         />
         <DisplayPage generalInfo={generalInfo} workInfo={workInfo} educationInfo={educationInfo} projectInfo={projectInfo} />
       </div>
-      <div className='footer'>
-        <p>© 2024 CV Application. Created By Anyue Wang. All Rights Reserved.</p>
-      </div>
+      <Footer />
     </>
   )
 }
