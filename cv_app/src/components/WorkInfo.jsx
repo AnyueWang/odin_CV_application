@@ -1,6 +1,7 @@
 import AddExperience from "./AddExperience"
 import DeleteExperience from "./DeleteExperience"
 import helpers from '../utilities/helpers'
+import PeriodSetting from "./PeriodSetting"
 
 const WorkInfo = ({ info, setInfo }) => {
   const addNewExperience = () => {
@@ -50,33 +51,16 @@ const WorkInfo = ({ info, setInfo }) => {
                 }}
               />
 
-              <div className="from-to">
-                <div className="date-picker">
-                  <label htmlFor={'from-' + eachExp.id}>From:</label>
-                  <input
-                    type="month"
-                    id={'from-' + eachExp.id}
-                    value={eachExp.from}
-                    onChange={(e) => {
-                      eachExp.from = e.target.value
-                      setInfo([...info])
-                    }}
-                  />
-                </div>
-
-                <div className="date-picker">
-                  <label htmlFor={'to-' + eachExp.id}>To:</label>
-                  <input
-                    type="month"
-                    id={'to-' + eachExp.id}
-                    value={eachExp.to}
-                    onChange={(e) => {
-                      eachExp.to = e.target.value
-                      setInfo([...info])
-                    }}
-                  />
-                </div>
-              </div>
+              <PeriodSetting
+                exp={eachExp}
+                changeFrom={(e) => {
+                  eachExp.from = e.target.value
+                  setInfo([...info])
+                }}
+                changeTo={(e) => {
+                  eachExp.to = e.target.value
+                  setInfo([...info])
+                }} />
 
               <label htmlFor={'description-' + eachExp.id}>Description:</label>
               <textarea

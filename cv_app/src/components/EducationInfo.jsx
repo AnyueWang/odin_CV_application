@@ -1,6 +1,7 @@
 import helpers from "../utilities/helpers"
 import DeleteExperience from "./DeleteExperience"
 import AddExperience from "./AddExperience"
+import PeriodSetting from "./PeriodSetting"
 
 const EducationInfo = ({ info, setInfo }) => {
   const addNewExperience = () => {
@@ -49,6 +50,17 @@ const EducationInfo = ({ info, setInfo }) => {
                   setInfo([...info])
                 }}
               />
+
+              <PeriodSetting
+                exp={eachExp}
+                changeFrom={(e) => {
+                  eachExp.from = e.target.value
+                  setInfo([...info])
+                }}
+                changeTo={(e) => {
+                  eachExp.to = e.target.value
+                  setInfo([...info])
+                }} />
             </div>
           )
         })
