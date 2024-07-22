@@ -18,6 +18,7 @@ const newWorkInfo = () => [{
   id: uuidv4(),
   title: '',
   company: '',
+  location: '',
   from: '',
   to: '',
   description: '',

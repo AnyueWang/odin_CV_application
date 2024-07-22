@@ -28,13 +28,24 @@ const WorkInfo = ({ info, setInfo }) => {
                 }}
               />
 
-              <label htmlFor={'job-title-' + eachExp.id}>Company:</label>
+              <label htmlFor={'company-' + eachExp.id}>Company:</label>
               <input
                 type="text"
                 id={'company-' + eachExp.id}
                 value={eachExp.company}
                 onChange={(e) => {
                   eachExp.company = e.target.value
+                  setInfo([...info])
+                }}
+              />
+
+              <label htmlFor={'location-' + eachExp.id}>Location:</label>
+              <input
+                type="text"
+                id={'location-' + eachExp.id}
+                value={eachExp.location}
+                onChange={(e) => {
+                  eachExp.location = e.target.value
                   setInfo([...info])
                 }}
               />
