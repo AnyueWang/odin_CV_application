@@ -18,6 +18,8 @@ const newWorkInfo = () => [{
   id: uuidv4(),
   title: '',
   company: '',
+  from: '',
+  to: '',
 }]
 const newEducationInfo = () => [{
   id: uuidv4(),

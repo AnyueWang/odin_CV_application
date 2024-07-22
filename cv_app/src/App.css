@@ -168,3 +168,13 @@ h1 {
   margin-top: 50px;
   padding: 10px 0;
 }
+
+.from-to {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-picker {
+  display: flex;
+  flex-direction: column;
+}
