@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import EditPage from './components/EditPage'
 import DisplayPage from './components/DisplayPage'
@@ -11,6 +11,11 @@ function App() {
   const [workInfo, setWorkInfo] = useState(helpers.newWorkInfo())
   const [educationInfo, setEducationInfo] = useState(helpers.newEducationInfo())
   const [projectInfo, setProjectInfo] = useState(helpers.newProjectInfo())
+
+  useEffect(()=>{
+    const localGeneral = JSON.parse(localStorage['General Information'])
+    setGeneralInfo(localGeneral)
+  }, [])
 
   return (
     <>
