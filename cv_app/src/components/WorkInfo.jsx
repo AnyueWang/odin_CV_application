@@ -16,6 +16,7 @@ const WorkInfo = ({ info, setInfo }) => {
           return (
             <div key={eachExp.id} className="one-experience">
               <DeleteExperience handleClick={() => deleteExperience(eachExp.id)} idx={idx} />
+
               <label htmlFor={'job-title-' + eachExp.id}>Job title:</label>
               <input
                 type="text"
@@ -26,6 +27,19 @@ const WorkInfo = ({ info, setInfo }) => {
                   setInfo([...info])
                 }}
               />
+
+              <label htmlFor={'job-title-' + eachExp.id}>Company:</label>
+              <input
+                type="text"
+                id={'company-' + eachExp.id}
+                value={eachExp.company}
+                onChange={(e) => {
+                  eachExp.company = e.target.value
+                  setInfo([...info])
+                }}
+              />
+
+              
             </div>
           )
         })}

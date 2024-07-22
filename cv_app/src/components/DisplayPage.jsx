@@ -25,6 +25,7 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
             return (
               <div key={each.id}>
                 <p>{each.title}</p>
+                <p>{each.company}</p>
               </div>
             )
           })
