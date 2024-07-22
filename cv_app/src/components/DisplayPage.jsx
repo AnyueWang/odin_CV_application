@@ -41,6 +41,7 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
               <div key={each.id}>
                 <p>{each.degree}</p>
                 <p>{each.major}</p>
+                <p>{each.institution}</p>
               </div>
             )
           })

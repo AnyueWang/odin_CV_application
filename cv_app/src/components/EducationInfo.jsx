@@ -38,6 +38,17 @@ const EducationInfo = ({ info, setInfo }) => {
                   setInfo([...info])
                 }}
               />
+
+              <label htmlFor={'institution-' + eachExp.id}>Institution:</label>
+              <input
+                type="text"
+                id={'institution-' + eachExp.id}
+                value={eachExp.institution}
+                onChange={(e) => {
+                  eachExp.institution = e.target.value
+                  setInfo([...info])
+                }}
+              />
             </div>
           )
         })
