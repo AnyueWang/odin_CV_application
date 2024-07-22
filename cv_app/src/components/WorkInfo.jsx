@@ -53,6 +53,10 @@ const WorkInfo = ({ info, setInfo }) => {
 
               <PeriodSetting
                 exp={eachExp}
+                setToPresent={(isOngoing) => {
+                  eachExp.to = isOngoing ? 'Present' : ''
+                  setInfo([...info])
+                }}
                 changeFrom={(e) => {
                   eachExp.from = e.target.value
                   setInfo([...info])
@@ -60,7 +64,8 @@ const WorkInfo = ({ info, setInfo }) => {
                 changeTo={(e) => {
                   eachExp.to = e.target.value
                   setInfo([...info])
-                }} />
+                }}
+              />
 
               <label htmlFor={'description-' + eachExp.id}>Description:</label>
               <textarea

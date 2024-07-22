@@ -32,6 +32,10 @@ const ProjectInfo = ({ info, setInfo }) => {
 
               <PeriodSetting
                 exp={eachExp}
+                setToPresent={(isOngoing) => {
+                  eachExp.to = isOngoing ? 'Present' : ''
+                  setInfo([...info])
+                }}
                 changeFrom={(e) => {
                   eachExp.from = e.target.value
                   setInfo([...info])
