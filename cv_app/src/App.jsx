@@ -13,8 +13,14 @@ function App() {
   const [projectInfo, setProjectInfo] = useState(helpers.newProjectInfo())
 
   useEffect(()=>{
-    const localGeneral = JSON.parse(localStorage['General Information'])
-    setGeneralInfo(localGeneral)
+    if (localStorage['General Information']) {
+      const localGeneral = JSON.parse(localStorage['General Information'])
+      setGeneralInfo(localGeneral)
+    }
+    if (localStorage['Work Experience']) {
+      const localWork = JSON.parse(localStorage['Work Experience'])
+      if (localWork) setWorkInfo(localWork)
+    }
   }, [])
 
   return (
