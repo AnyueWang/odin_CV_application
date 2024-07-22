@@ -18,10 +18,10 @@ const EducationInfo = ({ info, setInfo }) => {
             <div key={eachExp.id} className="one-experience">
               <DeleteExperience handleClick={() => deleteExperience(eachExp.id)} idx={idx} />
 
-              <label htmlFor={'edu-degree-' + eachExp.id}>Degree:</label>
+              <label htmlFor={'degree-' + eachExp.id}>Degree:</label>
               <input
                 type="text"
-                id={'edu-degree-' + eachExp.id}
+                id={'degree-' + eachExp.id}
                 value={eachExp.degree}
                 onChange={(e) => {
                   eachExp.degree = e.target.value
@@ -47,6 +47,17 @@ const EducationInfo = ({ info, setInfo }) => {
                 value={eachExp.institution}
                 onChange={(e) => {
                   eachExp.institution = e.target.value
+                  setInfo([...info])
+                }}
+              />
+
+              <label htmlFor={'location-' + eachExp.id}>Location:</label>
+              <input
+                type="text"
+                id={'location-' + eachExp.id}
+                value={eachExp.location}
+                onChange={(e) => {
+                  eachExp.location = e.target.value
                   setInfo([...info])
                 }}
               />

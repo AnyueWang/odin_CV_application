@@ -42,6 +42,8 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
                 <p>{each.degree}</p>
                 <p>{each.major}</p>
                 <p>{each.institution}</p>
+                <p>{each.location}</p>
+                <p>{`${each.from} - ${each.to}`}</p>
               </div>
             )
           })

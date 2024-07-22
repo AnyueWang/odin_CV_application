@@ -28,6 +28,9 @@ const newEducationInfo = () => [{
   degree: '',
   major: '',
   institution: '',
+  location: '',
+  from: '',
+  to: '',
 }]
 const newProjectInfo = () => [{
   id: uuidv4(),
