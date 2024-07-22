@@ -2,6 +2,7 @@ import helpers from "../utilities/helpers"
 import DeleteExperience from "./DeleteExperience"
 import AddExperience from "./AddExperience"
 import PeriodSetting from "./PeriodSetting"
+import InputInfo from "./InputInfo"
 
 const EducationInfo = ({ info, setInfo }) => {
   const addNewExperience = () => {
@@ -9,6 +10,10 @@ const EducationInfo = ({ info, setInfo }) => {
   }
   const deleteExperience = (id) => {
     setInfo(info.filter(each => each.id !== id))
+  }
+  const handleChange = (newInfo) => {
+    setInfo(newInfo)
+    localStorage.setItem('Education Experience', JSON.stringify(newInfo))
   }
   return (
     <form className="info-form">
@@ -18,63 +23,35 @@ const EducationInfo = ({ info, setInfo }) => {
             <div key={eachExp.id} className="one-experience">
               <DeleteExperience handleClick={() => deleteExperience(eachExp.id)} idx={idx} />
 
-              <label htmlFor={'degree-' + eachExp.id}>Degree:</label>
-              <input
-                type="text"
-                id={'degree-' + eachExp.id}
-                value={eachExp.degree}
-                onChange={(e) => {
-                  eachExp.degree = e.target.value
-                  setInfo([...info])
-                }}
-              />
-
-              <label htmlFor={'major-' + eachExp.id}>Major:</label>
-              <input
-                type="text"
-                id={'major-' + eachExp.id}
-                value={eachExp.major}
-                onChange={(e) => {
-                  eachExp.major = e.target.value
-                  setInfo([...info])
-                }}
-              />
-
-              <label htmlFor={'institution-' + eachExp.id}>Institution:</label>
-              <input
-                type="text"
-                id={'institution-' + eachExp.id}
-                value={eachExp.institution}
-                onChange={(e) => {
-                  eachExp.institution = e.target.value
-                  setInfo([...info])
-                }}
-              />
-
-              <label htmlFor={'location-' + eachExp.id}>Location:</label>
-              <input
-                type="text"
-                id={'location-' + eachExp.id}
-                value={eachExp.location}
-                onChange={(e) => {
-                  eachExp.location = e.target.value
-                  setInfo([...info])
-                }}
-              />
-
+              <InputInfo id={'degree-' + eachExp.id} type='text' tag='Degree' value={eachExp.degree} onChange={(e) => {
+                eachExp.degree = e.target.value
+                setInfo([...info])
+              }} />
+              <InputInfo id={'major-' + eachExp.id} type='text' tag='Major' value={eachExp.major} onChange={(e) => {
+                eachExp.major = e.target.value
+                setInfo([...info])
+              }} />
+              <InputInfo id={'institution-' + eachExp.id} type='text' tag='Institution' value={eachExp.institution} onChange={(e) => {
+                eachExp.institution = e.target.value
+                setInfo([...info])
+              }} />
+              <InputInfo id={'location-' + eachExp.id} type='text' tag='Location' value={eachExp.location} onChange={(e) => {
+                eachExp.location = e.target.value
+                setInfo([...info])
+              }} />
               <PeriodSetting
                 exp={eachExp}
                 setToPresent={(isOngoing) => {
                   eachExp.to = isOngoing ? 'Present' : ''
-                  setInfo([...info])
+                  handleChange([...info])
                 }}
                 changeFrom={(e) => {
                   eachExp.from = e.target.value
-                  setInfo([...info])
+                  handleChange([...info])
                 }}
                 changeTo={(e) => {
                   eachExp.to = e.target.value
-                  setInfo([...info])
+                  handleChange([...info])
                 }} />
             </div>
           )

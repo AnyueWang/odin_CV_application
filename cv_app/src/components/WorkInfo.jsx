@@ -40,20 +40,20 @@ const WorkInfo = ({ info, setInfo }) => {
                 exp={eachExp}
                 setToPresent={(isOngoing) => {
                   eachExp.to = isOngoing ? 'Present' : ''
-                  setInfo([...info])
+                  handleChange([...info])
                 }}
                 changeFrom={(e) => {
                   eachExp.from = e.target.value
-                  setInfo([...info])
+                  handleChange([...info])
                 }}
                 changeTo={(e) => {
                   eachExp.to = e.target.value
-                  setInfo([...info])
+                  handleChange([...info])
                 }}
               />
               <TextareaInfo id={'description-' + eachExp.id} tag='Description' value={eachExp.description} rows={5} onChange={(e) => {
                 eachExp.description = e.target.value
-                setInfo([...info])
+                handleChange([...info])
               }} />
             </div>
           )

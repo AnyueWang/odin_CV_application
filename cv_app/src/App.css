@@ -38,7 +38,7 @@ input {
 .display-page {
   background-color: white;
   width: 800px;
-  height: 1200px;
+  height: minmax(1200px, auto);
   padding: 0 20px;
 }
 

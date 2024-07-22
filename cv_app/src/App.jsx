@@ -21,6 +21,10 @@ function App() {
       const localWork = JSON.parse(localStorage['Work Experience'])
       if (localWork) setWorkInfo(localWork)
     }
+    if (localStorage['Education Experience']) {
+      const localEducation = JSON.parse(localStorage['Education Experience'])
+      if (localEducation) setEducationInfo(localEducation)
+    }
   }, [])
 
   return (
