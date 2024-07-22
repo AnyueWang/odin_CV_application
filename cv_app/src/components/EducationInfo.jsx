@@ -23,9 +23,19 @@ const EducationInfo = ({ info, setInfo }) => {
                 id={'edu-degree-' + eachExp.id}
                 value={eachExp.degree}
                 onChange={(e) => {
-                  const otherExps = info.filter(each => each.id !== eachExp.id)
                   eachExp.degree = e.target.value
-                  setInfo([...otherExps, eachExp])
+                  setInfo([...info])
+                }}
+              />
+
+              <label htmlFor={'major-' + eachExp.id}>Major:</label>
+              <input
+                type="text"
+                id={'major-' + eachExp.id}
+                value={eachExp.major}
+                onChange={(e) => {
+                  eachExp.major = e.target.value
+                  setInfo([...info])
                 }}
               />
             </div>
