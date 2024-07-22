@@ -66,6 +66,18 @@ const WorkInfo = ({ info, setInfo }) => {
                   />
                 </div>
               </div>
+
+              <label htmlFor={'description-' + eachExp.id}>Description:</label>
+              <textarea
+                id={'description-' + eachExp.id}
+                value={eachExp.description}
+                onChange={(e) => {
+                  eachExp.description = e.target.value
+                  setInfo([...info])
+                }}
+                rows={5}
+              />
+
             </div>
           )
         })}
