@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const PeriodSetting = ({ exp, setToPresent, changeFrom, changeTo }) => {
-  const [isOngoing, setIsOngoing] = useState(false)
+  const [isOngoing, setIsOngoing] = useState(exp.to === 'Present')
   const toggleOngoing = () => {
     setIsOngoing(!isOngoing)
     setToPresent(!isOngoing)
@@ -35,6 +35,7 @@ const PeriodSetting = ({ exp, setToPresent, changeFrom, changeTo }) => {
           type="checkbox"
           id={"current-" + exp.id}
           onClick={toggleOngoing}
+          defaultChecked={isOngoing}
         />
       </div>
     </div>
