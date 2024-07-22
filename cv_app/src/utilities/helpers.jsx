@@ -35,6 +35,9 @@ const newEducationInfo = () => [{
 const newProjectInfo = () => [{
   id: uuidv4(),
   name: '',
+  from: '',
+  to: '',
+  description: '',
 }]
 
 export default {
