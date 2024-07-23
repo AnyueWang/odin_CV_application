@@ -57,7 +57,7 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
                 <div className='display-experience-basic'>
                   <p className='display-job-title'>{each.title}</p>
                   <p className='display-period' hidden={!each.from || !each.to}>{`${each.from} - ${each.to}`}</p>
-                  <p>{each.company}, {each.location}</p>
+                  <p  hidden={!each.company || !each.location}>{each.company}, {each.location}</p>
                 </div>
                 <p>{each.description}</p>
               </div>
@@ -72,9 +72,9 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
             return (
               <div className='display-one-experience' key={each.id}>
                 <div className='display-experience-basic'>
-                  <p><span className='display-edu-title'>{each.degree}</span>, {each.major}</p>
-                  <p className='display-period'>{`${each.from} - ${each.to}`}</p>
-                  <p>{each.institution}, {each.location}</p>
+                  <p hidden={!each.degree || !each.major}><span className='display-edu-title'>{each.degree}</span>, {each.major}</p>
+                  <p className='display-period' hidden={!each.from || !each.to}>{`${each.from} - ${each.to}`}</p>
+                  <p hidden={!each.institution || !each.location}>{each.institution}, {each.location}</p>
                 </div>
               </div>
             )
@@ -89,7 +89,7 @@ const DisplayPage = ({ generalInfo, workInfo, educationInfo, projectInfo }) => {
               <div className='display-one-experience' key={each.id}>
                 <div className='display-experience-basic'>
                   <p className='display-pro-title'>{each.name}</p>
-                  <p className='display-period'>{`${each.from} - ${each.to}`}</p>
+                  <p className='display-period' hidden={!each.from || !each.to}>{`${each.from} - ${each.to}`}</p>
                 </div>
                 <p>{each.description}</p>
               </div>
