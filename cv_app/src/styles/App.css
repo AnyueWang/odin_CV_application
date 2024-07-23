@@ -35,13 +35,6 @@ input {
   width: 300px;
 }
 
-.display-page {
-  background-color: white;
-  width: 800px;
-  height: minmax(1200px, auto);
-  padding: 0 20px;
-}
-
 .info-form {
   display: flex;
   flex-direction: column;
@@ -191,4 +184,8 @@ h1 {
 
 .to-invisible {
   display: none;
+}
+
+textarea {
+  resize: vertical
 }

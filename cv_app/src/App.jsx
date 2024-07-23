@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import './App.css'
+import './styles/App.css'
+import './styles/Display.css'
 import EditPage from './components/EditPage'
 import DisplayPage from './components/DisplayPage'
 import Header from './components/Header'
