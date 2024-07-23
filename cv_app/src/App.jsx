@@ -13,7 +13,7 @@ function App() {
   const [educationInfo, setEducationInfo] = useState(helpers.newEducationInfo())
   const [projectInfo, setProjectInfo] = useState(helpers.newProjectInfo())
 
-  useEffect(()=>{
+  useEffect(() => {
     if (localStorage['General Information']) {
       const localGeneral = JSON.parse(localStorage['General Information'])
       setGeneralInfo(localGeneral)
